@@ -35,18 +35,27 @@
             <th class="col-data-header">Vencimento</th>
             <th class="col-data-header">Pagamento</th>
             <th class="col-valor-header">Valor</th>
+            <th class="col-acoes-header"></th>
         </tr>
     </ng-template>
     <ng-template pTemplate="body" let-lancamentos>
         <tr>
             <td>{{lancamentos.pessoa}}</td>
             <td>{{lancamentos.descricao}}</td>
-            <td class="col-data ui-resizable-column">{{lancamentos.dataVencimento}}</td>
+            <td class="col-data">{{lancamentos.dataVencimento}}</td>
             <td class="col-data">{{lancamentos.dataPagamento}}</td>
-            <td class="col-valor ui-resizable-column">{{lancamentos.valor}}</td>
+            <td class="col-valor"><span [style.color]="lancamentos.tipo === 'DESPESA' ? 'red' : 'blue'">{{lancamentos.valor}}</span></td>
+            <td class="col-acoes">
+              <a pButton icon="fa fa-pencil"></a>
+              <button pButton icon="fa fa-trash"></button>
+            </td>
         </tr>
     </ng-template>
-</p-table>
+  </p-table>
+ </div>
+
+ <div class="ui-g-12">
+   <a pButton label="Novo Lançamento"></a>
  </div>
 
   </div>
