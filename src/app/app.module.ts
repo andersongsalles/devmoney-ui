@@ -7,10 +7,12 @@ import {TableModule} from 'primeng/table';
 import { AppComponent } from './app.component';
 import {TooltipModule} from 'primeng/tooltip';
 import { AppRoutingModule } from './app-routing.module';
+import { LancamentosPesquisaComponent } from './lancamentos-pesquisa/lancamentos-pesquisa.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LancamentosPesquisaComponent
   ],
   imports: [
     BrowserModule,
